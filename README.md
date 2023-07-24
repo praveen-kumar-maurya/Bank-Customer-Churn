@@ -19,7 +19,7 @@ A bank customer churn analysis was conducted using a dataset sourced from Kaggle
 The objective of bank customer churn analysis is to examine data and identify patterns, trends, and factors influencing customer churn. By analysing customer demographics, account activity, product usage, and satisfaction metrics, significant predictors of churn can be determined. Personalized retention strategies will be implemented, including tailored incentives, loyalty programs, and proactive support, to mitigate churn risk. Achieving this objective will improve customer retention, boost profitability, foster long-term customer relationships, and establish a competitive advantage in the banking industry.
 
 # **Data Model**
-
+![Bank_churn_data_model](https://github.com/praveen-kumar-maurya/Bank-Customer-Churn/assets/88583491/67fb5691-857f-42cd-a8ce-697a6754f16a)
 
 # **Insights**
 1.  The customers who have Fair and poor credit score type are more prone to exit bank and 
