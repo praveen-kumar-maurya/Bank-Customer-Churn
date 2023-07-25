@@ -379,6 +379,8 @@ on the female customers churn */
 
 
 -- Effect of Geography leading to Female customers churn
+CREATE EXTENSION tablefunc;
+
 SELECT Gender,France,Germany,Spain
 FROM CROSSTAB('SELECT Gender 
     			, Geography
@@ -394,8 +396,6 @@ FROM CROSSTAB('SELECT Gender
 /* Female Customers who are from France are most likely to exit bank. */
 
 -- Effect of credit score type and Geography leading to female customers churn
-CREATE EXTENSION tablefunc;
-
 CREATE TEMPORARY TABLE credit_score AS
 (SELECT *,
 CASE 
