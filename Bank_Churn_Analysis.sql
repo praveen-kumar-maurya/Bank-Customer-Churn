@@ -168,16 +168,16 @@ SELECT
     COUNT(CASE WHEN CustomerId IS NULL THEN 1 END) AS CustomerId_null_count,
     COUNT(CASE WHEN Surname IS NULL THEN 1 END) AS Surname_null_count,
     COUNT(CASE WHEN CreditScore IS NULL THEN 1 END) AS CreditScore_null_count,
-	COUNT(CASE WHEN Geography IS NULL THEN 1 END) AS Geography_null_count,
-	COUNT(CASE WHEN Gender IS NULL THEN 1 END) AS Gender_null_count,
-	COUNT(CASE WHEN Age IS NULL THEN 1 END) AS Age_null_count,
-	COUNT(CASE WHEN Tenure IS NULL THEN 1 END) AS Tenure_null_count,
-	COUNT(CASE WHEN Balance IS NULL THEN 1 END) AS Balance_null_count,
-	COUNT(CASE WHEN NumOfProducts IS NULL THEN 1 END) AS NumOfProducts_null_count,
-	COUNT(CASE WHEN HasCrCard IS NULL THEN 1 END) AS HasCrCard_null_count,
-	COUNT(CASE WHEN IsActiveMember IS NULL THEN 1 END) AS IsActiveMember_null_count,
-	COUNT(CASE WHEN EstimatedSalary IS NULL THEN 1 END) AS EstimatedSalary_null_count,
-	COUNT(CASE WHEN Exited IS NULL THEN 1 END) AS Exited_null_count
+    COUNT(CASE WHEN Geography IS NULL THEN 1 END) AS Geography_null_count,
+    COUNT(CASE WHEN Gender IS NULL THEN 1 END) AS Gender_null_count,
+    COUNT(CASE WHEN Age IS NULL THEN 1 END) AS Age_null_count,
+    COUNT(CASE WHEN Tenure IS NULL THEN 1 END) AS Tenure_null_count,
+    COUNT(CASE WHEN Balance IS NULL THEN 1 END) AS Balance_null_count,
+    COUNT(CASE WHEN NumOfProducts IS NULL THEN 1 END) AS NumOfProducts_null_count,
+    COUNT(CASE WHEN HasCrCard IS NULL THEN 1 END) AS HasCrCard_null_count,
+    COUNT(CASE WHEN IsActiveMember IS NULL THEN 1 END) AS IsActiveMember_null_count,
+    COUNT(CASE WHEN EstimatedSalary IS NULL THEN 1 END) AS EstimatedSalary_null_count,
+    COUNT(CASE WHEN Exited IS NULL THEN 1 END) AS Exited_null_count
 FROM bank_churn;
 -- No null value found
 
