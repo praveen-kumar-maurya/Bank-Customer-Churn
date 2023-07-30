@@ -54,7 +54,7 @@ boost profitability, foster long-term customer relationships, and establish a co
 CREATE TABLE IF NOT EXISTS bank_churn
 (
 	RowNumber SERIAL,
-	CustomerId INTEGER NOT NULL UNIQUE,
+	CustomerId INTEGER PRIMARY KEY,
 	Surname VARCHAR(50) NOT NULL,
 	CreditScore INTEGER NOT NULL,
 	Geography VARCHAR(50),
@@ -74,14 +74,14 @@ COPY Bank_Churn FROM 'E:\Almabetter course material\Projects\My SQL Project\Bank
 CREATE TABLE IF NOT EXISTS active_customer
 (
 	IsActiveMember INTEGER,
-	Active_Category VARCHAR(10)
+	Active_Category VARCHAR(10) 
 );
 
 COPY Active_Customer FROM 'E:\Almabetter course material\Projects\My SQL Project\Bank churn\Active_Customer.csv' with CSV HEADER;
 
 CREATE TABLE IF NOT EXISTS credit_card
 (
-	HasCrCard INTEGER,
+	HasCrCard INTEGER PRIMARY KEY,
 	Credit_card VARCHAR(10)
 );
 
@@ -89,12 +89,11 @@ COPY Credit_Card FROM 'E:\Almabetter course material\Projects\My SQL Project\Ban
 
 CREATE TABLE IF NOT EXISTS exit_customer
 (
-	Exited INTEGER,
+	Exited INTEGER PRIMARY KEY,
 	Exit_category VARCHAR(10)
 );
 
 COPY Exit_Customer FROM 'E:\Almabetter course material\Projects\My SQL Project\Bank churn\Exit_Customer.csv' with CSV HEADER;
-
 
 --First dataset look
 SELECT * FROM bank_churn;
@@ -104,7 +103,7 @@ SELECT * FROM exit_customer;
 
 
 -- Database Size
-SELECT pg_size_pretty(pg_database_size('Bank_Customer_Churn')) AS database_size;
+SELECT pg_size_pretty(pg_database_size('Bank_customer_churn')) AS database_size;
 
 -- Table Sizes
 SELECT pg_size_pretty(pg_relation_size('bank_churn'));
