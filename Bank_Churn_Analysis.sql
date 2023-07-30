@@ -163,16 +163,6 @@ select column_name,data_type
 from INFORMATION_SCHEMA.COLUMNS
 where TABLE_NAME='bank_churn';
 
-
--- checking null values of bank_churn data 
--- Using Nested Query 
-SELECT * FROM bank_churn
-WHERE (select column_name
-from INFORMATION_SCHEMA.COLUMNS
-where TABLE_NAME ='bank_churn') = NULL;
--- No Missing Values Found 
-
-
 -- Dropping Unnecessary column like rownumber 
 ALTER TABLE bank_churn
 DROP COLUMN rownumber;
